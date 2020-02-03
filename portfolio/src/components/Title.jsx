@@ -4,7 +4,7 @@ const Title = () => {
 	return (
 		<div className="title">
 			<h1>Hello</h1>
-			<p id="description">welcome to my site</p>
+			<p className="description">welcome to my site</p>
 		</div>
 	);
 };

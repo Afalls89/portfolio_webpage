@@ -4,13 +4,18 @@ const handleClick = event => {
 	console.log("go to the page");
 };
 const Sidebar = ({ pages }) => {
-	return pages.map(page => {
-		return (
-			<li className="sidebar" key={page} onClick={handleClick}>
-				<h3>{page}</h3>
-			</li>
-		);
-	});
+	return (
+		<nav className="sidebar">
+			{pages.map(page => {
+				return (
+					<li key={page} onClick={handleClick}>
+						<h3>{page}</h3>
+					</li>
+				);
+			})}
+			;
+		</nav>
+	);
 };
 
 export default Sidebar;
