@@ -13,7 +13,6 @@ const Sidebar = ({ pages }) => {
 					</li>
 				);
 			})}
-			;
 		</nav>
 	);
 };

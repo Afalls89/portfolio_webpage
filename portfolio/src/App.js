@@ -9,6 +9,9 @@ function App() {
 		<div className="App">
 			<Title />
 			<Sidebar pages={pages} />
+			<section className="main">
+				<p>brief description of coding experience</p>
+			</section>
 		</div>
 	);
 }
