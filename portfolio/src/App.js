@@ -8,17 +8,15 @@ import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
 
 function App() {
-	const pages = ["Home", "Projects", "CV", "Contact Me"];
 	return (
 		<div className="App">
 			<Title />
-			<Navbar pages={pages} />
+			<Navbar />
 			<section className="main">
-				<p>brief description of coding experience</p>
 				<Router>
 					<Home path="/" />
 					<Projects path="/projects" />
-					<ContactMe path="/ContactMe" />
+					<ContactMe path="/contactme" />
 				</Router>
 			</section>
 		</div>

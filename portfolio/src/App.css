@@ -4,13 +4,22 @@
   display: grid;
   height: 500px;
   grid-template-columns: 1fr 6fr;
-  grid-template-rows: 1fr 1fr 4fr;
+  grid-template-rows: 1fr 4fr;
   grid-template-areas:
-    "header header"
-    "header header"
-    "sidebar main";
+    "header"
+    "sidebar"
+    "content";
   grid-column-gap: 5px;
   grid-row-gap: 5px;
+}
+
+@media only screen and (min-width: 800px) {
+  .App {
+    grid-template-areas:
+      "header header"
+      "sidebar content";
+  }
+
 }
 
 .title {
@@ -24,6 +33,7 @@
 }
 
 .description {
+  grid-area: header;
   color: coral;
   display: flex;
   flex-direction: column;
@@ -43,9 +53,9 @@
   align-items: flex-start;
 }
 
-.main {
+.content {
   border: 2px solid rgb(255, 0, 221);
-  grid-area: main;
+  grid-area: content;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

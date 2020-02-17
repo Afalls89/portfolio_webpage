@@ -1,18 +1,18 @@
 import React from "react";
+import { Link } from "@reach/router";
 
-const handleClick = event => {
-	console.log("go to the page");
-};
-const Sidebar = ({ pages }) => {
+const Sidebar = () => {
 	return (
 		<nav className="sidebar">
-			{pages.map(page => {
-				return (
-					<li key={page} onClick={handleClick}>
-						<h3>{page}</h3>
-					</li>
-				);
-			})}
+			<Link to="/">
+				<h3>Home</h3>
+			</Link>
+			<Link to="/projects">
+				<h3>Projects</h3>
+			</Link>
+			<Link to="/contactme">
+				<h3>Contact Me</h3>
+			</Link>
 		</nav>
 	);
 };

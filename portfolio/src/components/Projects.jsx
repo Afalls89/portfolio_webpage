@@ -4,12 +4,10 @@ class Projects extends Component {
 	state = {};
 	render() {
 		return (
-			<main>
-				<ul>
-					<li>BE</li>
-					<li>FE</li>
-					<li>PROJ</li>
-				</ul>
+			<main className="content">
+				<a href="https://github.com/Afalls89/backend-sprint">BE</a>
+				<a href="https://github.com/Afalls89/fe-nc-news">FE</a>
+				<li>PROJ</li>
 			</main>
 		);
 	}
