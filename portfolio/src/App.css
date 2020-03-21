@@ -2,23 +2,18 @@
   border: 5px solid red;
   text-align: center;
   display: grid;
-  height: 500px;
-  grid-template-columns: 1fr 6fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 4fr;
   grid-template-areas:
     "header"
     "sidebar"
     "content";
   grid-column-gap: 5px;
   grid-row-gap: 5px;
-}
-
-@media only screen and (min-width: 800px) {
-  .App {
-    grid-template-areas:
-      "header header"
-      "sidebar content";
-  }
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 
 }
 
@@ -29,35 +24,69 @@
   min-width: 30vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: stretch;
+
 }
 
 .description {
   grid-area: header;
-  color: coral;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
+  color: coral
 }
 
 .sidebar {
   grid-area: sidebar;
   border: 2px solid blue;
   padding: 2px;
-  max-width: 30vw;
-  min-width: 110px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
 }
 
 .content {
   border: 2px solid rgb(255, 0, 221);
   grid-area: content;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
-  flex-wrap: wrap;
+  align-items: center;
+
+}
+
+.profilePic {
+
+
+  max-height: 100%;
+  max-width: 100%;
+
+}
+
+
+@media only screen and (min-width: 800px) {
+  .App {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      "header header"
+      "sidebar content";
+
+    background-color: lightgreen;
+
+
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    border: 2px solid yellow;
+    padding: 2px;
+    max-width: 30vw;
+    min-width: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+
 }
