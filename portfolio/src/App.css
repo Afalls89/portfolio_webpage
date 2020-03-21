@@ -55,11 +55,8 @@
 }
 
 .profilePic {
-
-
   max-height: 100%;
   max-width: 100%;
-
 }
 
 
@@ -86,6 +83,16 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+  }
+
+  .profilePic {
+    max-height: 30%;
+    max-width: 30%;
+  }
+
+  .content {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 
 

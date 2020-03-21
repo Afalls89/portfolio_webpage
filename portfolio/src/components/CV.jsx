@@ -1,10 +1,14 @@
 import React from "react";
-const cV = require("../documents/Andrew Falls CV2020.pdf");
+
+// import { Document } from "react-pdf/dist/entry.parcel";
+// import { Document, pdfjs } from "react-pdf";
+import { Document, Page } from "react-pdf/dist/entry.webpack";
+// pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const CV = () => {
 	return (
 		<div className="content">
-			<h5>{cV}</h5>
+			<Document file="AndrewFallsCV2020.pdf" />
 		</div>
 	);
 };
