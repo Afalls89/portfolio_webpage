@@ -6,6 +6,7 @@ import { Router, Link } from "@reach/router";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
+import CV from "./components/CV";
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 					<Home path="/" />
 					<Projects path="/projects" />
 					<ContactMe path="/contactme" />
+					<CV path="/cv" />
 				</Router>
 			</section>
 		</div>

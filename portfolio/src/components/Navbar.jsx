@@ -13,6 +13,9 @@ const Sidebar = () => {
 			<Link to="/contactme">
 				<h3>Contact Me</h3>
 			</Link>
+			<Link to="/cv">
+				<h3>CV</h3>
+			</Link>
 		</nav>
 	);
 };
