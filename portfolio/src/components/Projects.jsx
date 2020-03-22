@@ -7,11 +7,13 @@ class Projects extends Component {
 			{
 				name: "NC News Backend",
 				githubURL: "https://github.com/Afalls89/backend-sprint",
+				hostedSite: "https://be-nc-news-2.herokuapp.com/api",
 				project_id: 1
 			},
 			{
 				name: "NC News Frontend",
 				githubURL: "https://github.com/Afalls89/fe-nc-news",
+				hostedSite: "https://andrews-nc-news.netlify.com/",
 				project_id: 2
 			},
 			{
@@ -28,9 +30,11 @@ class Projects extends Component {
 	render() {
 		return (
 			<main className="content">
-				{this.state.projects.map(project => {
-					return <ProjectCard key={project.project_id} project={project} />;
-				})}
+				<section className="projects">
+					{this.state.projects.map(project => {
+						return <ProjectCard key={project.project_id} project={project} />;
+					})}
+				</section>
 			</main>
 		);
 	}

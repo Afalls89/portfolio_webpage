@@ -7,25 +7,54 @@ class ProjectCard extends Component {
 	};
 
 	render() {
-		// const presentationSlides = "Presentation Slides";
-		// if (!this.props.project.presentationSlides) {
-		// 	console.log(this.props.project.presentationSlides);
-		// 	presentationSlides = "";
-		// }
-		return (
-			<section>
-				<h3>{this.props.project.name}</h3>
-				<a href={this.props.project.githubURL} target="_blank">
-					GitHub Repository
-				</a>
-				<a href={this.props.project.presentationSlides} target="_blank">
-					{this.props.project.presentationSlides && "Presentation Slides"}
-				</a>
-				<a href={this.props.project.presentationVideo} target="_blank">
-					{this.props.project.presentationVideo && "Presentation video"}
-				</a>
-			</section>
-		);
+		if (this.props.project.hostedSite) {
+			return (
+				<section className="projectCard">
+					<h3>{this.props.project.name}</h3>
+
+					<section className="projectInfo">
+						<a href={this.props.project.githubURL} target="_blank">
+							{this.props.project.githubURL && "GitHub Repository"}
+						</a>
+						<a
+							className="projectLink"
+							href={this.props.project.hostedSite}
+							target="_blank"
+						>
+							{this.props.project.hostedSite && "Hosted Site"}
+						</a>
+					</section>
+				</section>
+			);
+		}
+
+		if (this.props.project.presentationSlides) {
+			return (
+				<section className="projectCard">
+					<h3>{this.props.project.name}</h3>
+
+					<section className="projectInfo">
+						<a href={this.props.project.githubURL} target="_blank">
+							{this.props.project.githubURL && "GitHub Repository"}
+						</a>
+						<a
+							className="projectLink"
+							href={this.props.project.presentationSlides}
+							target="_blank"
+						>
+							{this.props.project.presentationSlides && "Presentation Slides"}
+						</a>
+						<a
+							className="projectLink"
+							href={this.props.project.presentationVideo}
+							target="_blank"
+						>
+							{this.props.project.presentationVideo && "Presentation video"}
+						</a>
+					</section>
+				</section>
+			);
+		}
 	}
 }
 

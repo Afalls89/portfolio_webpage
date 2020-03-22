@@ -1,5 +1,5 @@
 .App {
-  border: 5px solid red;
+
   text-align: center;
   display: grid;
   grid-template-columns: 1fr;
@@ -10,16 +10,24 @@
     "content";
   grid-column-gap: 5px;
   grid-row-gap: 5px;
-  background-color: lightblue;
+
+  background-image: url("./images/ana-toma-dYsw2Pp_6aE-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  min-height: 667px;
+
 
 }
 
+
+
 .title {
   grid-area: header;
-  border: 2px solid green;
+
   padding: 2px;
   min-width: 30vw;
   display: flex;
@@ -30,12 +38,12 @@
 
 .description {
   grid-area: header;
-  color: coral
+  color: rgb(255, 96, 38)
 }
 
 .sidebar {
   grid-area: sidebar;
-  border: 2px solid blue;
+
   padding: 2px;
   display: flex;
   flex-direction: row;
@@ -45,7 +53,7 @@
 }
 
 .content {
-  border: 2px solid rgb(255, 0, 221);
+
   grid-area: content;
   display: flex;
   flex-direction: column;
@@ -55,8 +63,8 @@
 }
 
 .profilePic {
-  max-height: 100%;
-  max-width: 100%;
+  max-height: 70%;
+  max-width: 70%;
 }
 
 .cvPic {
@@ -64,24 +72,65 @@
   max-width: 100%;
 }
 
+.projectCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5%;
+  border-radius: 10%;
+  margin: 5%;
+  background-color: rgba(0, 0, 0, 0.308);
+
+  color: rgb(255, 255, 255);
+
+
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.projectLink {
+  padding: 5%;
+}
+
+.projectName {
+  padding: 5%;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: rgb(255, 81, 0);
+}
+
 
 @media only screen and (min-width: 800px) {
   .App {
     display: grid;
     grid-template-columns: 1fr 6fr;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: 1fr 3fr;
     grid-template-areas:
       "header header"
       "sidebar content";
-
-    background-color: lightgreen;
+    background-image: url("./images/ana-toma-XsGwe6gYg0c-unsplash-landscape.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 
 
   }
 
   .sidebar {
     grid-area: sidebar;
-    border: 2px solid yellow;
+
     padding: 2px;
     max-width: 30vw;
     min-width: 110px;
@@ -98,6 +147,50 @@
   .content {
     padding-left: 10%;
     padding-right: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 0%;
+    padding-right: 0%;
+
+  }
+
+  .projectCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5%;
+    border-radius: 10%;
+    margin: 5%;
+    background-color: rgba(0, 0, 0, 0.308);
+
+    color: rgb(255, 255, 255);
+
+
+  }
+
+  .projectInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* flex-wrap: wrap; */
+
+  }
+
+  .projectLink {
+    padding: 5%;
   }
 
 
