@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "@reach/router";
 
 class ProjectCard extends Component {
 	state = {
@@ -10,16 +9,21 @@ class ProjectCard extends Component {
 		if (this.props.project.hostedSite) {
 			return (
 				<section className="projectCard">
-					<h3>{this.props.project.name}</h3>
+					<h2>{this.props.project.name}</h2>
 
 					<section className="projectInfo">
-						<a href={this.props.project.githubURL} target="_blank">
+						<a
+							href={this.props.project.githubURL}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							{this.props.project.githubURL && "GitHub Repository"}
 						</a>
 						<a
 							className="projectLink"
 							href={this.props.project.hostedSite}
 							target="_blank"
+							rel="noopener noreferrer"
 						>
 							{this.props.project.hostedSite && "Hosted Site"}
 						</a>
@@ -31,16 +35,21 @@ class ProjectCard extends Component {
 		if (this.props.project.presentationSlides) {
 			return (
 				<section className="projectCard">
-					<h3>{this.props.project.name}</h3>
+					<h2>{this.props.project.name}</h2>
 
 					<section className="projectInfo">
-						<a href={this.props.project.githubURL} target="_blank">
+						<a
+							href={this.props.project.githubURL}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							{this.props.project.githubURL && "GitHub Repository"}
 						</a>
 						<a
 							className="projectLink"
 							href={this.props.project.presentationSlides}
 							target="_blank"
+							rel="noopener noreferrer"
 						>
 							{this.props.project.presentationSlides && "Presentation Slides"}
 						</a>
@@ -48,6 +57,7 @@ class ProjectCard extends Component {
 							className="projectLink"
 							href={this.props.project.presentationVideo}
 							target="_blank"
+							rel="noopener noreferrer"
 						>
 							{this.props.project.presentationVideo && "Presentation video"}
 						</a>

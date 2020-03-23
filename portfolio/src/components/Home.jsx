@@ -4,7 +4,7 @@ import profilePic from "../images/photo.JPG";
 const Home = () => {
 	return (
 		<main className="content">
-			<p>
+			<p className="introduction">
 				I am proud to have graduated from the Northcoders full stack developer
 				pathway. Building on the technical skills acquired from my previous job,
 				the bootcamp has given me an exciting set of new skills which I’m keen
@@ -12,7 +12,7 @@ const Home = () => {
 				greatest tools and Industry best practice, I’m confident to take my
 				first steps into an exciting and vibrant industry.
 			</p>
-			<img className="profilePic" src={profilePic} alt="profile picture" />
+			<img className="profilePic" src={profilePic} alt="profile pic" />
 		</main>
 	);
 };
